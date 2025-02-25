@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.header {
+  position: relative;
+  height: 800px;
+  background: rgb(225, 255, 143);
+  background-image: url(img/star_rignt.png), url(img/star_leftmini.png), url(img/starbig.svg);
+  background-position: 69px 63px, calc(100% - 344px) calc(100% - 149px), calc(100% + 450px) calc(100% - 0px);
+  background-repeat: no-repeat;
+}
+.header__content {
+  padding-top: 196px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.header__title {
+  color: rgb(32, 32, 39);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+.header__text {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+.header__button {
+  width: 247px;
+  height: 66px;
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+}
+.header__button:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(32, 32, 39);
+}
+.header__runningline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 51px;
+  width: 3220px;
+  height: 90px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background: rgb(188, 236, 48);
+  overflow: hidden;
+  padding-left: 51px;
+  padding-right: 51px;
+}
+.header__runningline-text {
+  color: rgb(32, 32, 39);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 4%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.for__games {
+  background: rgb(32, 32, 39);
+}
+.for__games-title {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+.for__games-text {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}/*# sourceMappingURL=style.css.map */
