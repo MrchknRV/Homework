@@ -1,0 +1,220 @@
+$colortext: rgb(32, 32, 39);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.header {
+    position: relative;
+    height: 800px;
+    background: rgb(225, 255, 143);
+    background-image: url(img/star_right.png), url(img/star_leftmini.png), url(img/starbig.svg);
+    background-position: 69px 63px, calc(100% - 344px) calc(100% - 149px), calc(100% + 450px) calc(100% - 0px);
+    background-repeat: no-repeat;
+
+    &__content {
+        padding-top: 196px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: $colortext;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        text-align: left;
+    }
+
+    &__text {
+        color: $colortext;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+        padding-top: 24px;
+        padding-bottom: 48px;
+    }
+
+    &__button {
+        width: 247px;
+        height: 66px;
+        box-sizing: border-box;
+        border: 1px solid $colortext;
+        border-radius: 60px;
+        background: $colortext;
+        color: rgb(255, 255, 255);
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
+
+        &:hover {
+            background: rgb(255, 255, 255);
+            color: $colortext;
+        }
+    }
+
+    &__runningline {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 51px;
+        width: 3220px;
+        height: 90px;
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(50px);
+        background: rgb(188, 236, 48);
+        overflow: hidden;
+        padding-left: 51px;
+        padding-right: 51px;
+
+        &-text {
+            color: $colortext;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 110%;
+            letter-spacing: 4%;
+            text-align: left;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.for__games {
+    background: $colortext;
+    padding-top: 94px;
+    padding-bottom: 50px;
+    border-bottom: darkolivegreen;
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &-title {
+        color: rgb(255, 255, 255);
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        text-align: left;
+    }
+
+    &-text {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+    }
+
+    &-games {
+        padding-top: 63px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+    }
+}
+
+.games__card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 30px;
+    grid-column: span 4;
+
+    &:hover {
+        transform: scale(1.08);
+        transition: 0.3s;
+    }
+
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 32px 36px 32px;
+        gap: 26px;
+    }
+    
+    &-serial {
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+        color: $colortext;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%; 
+        text-align: left;
+
+        &-text {
+            padding: 8px 16px 10px 16px;
+        }
+
+        &_size {
+            width: 112px;
+            height: 36px;
+        }
+    }
+
+    &-title {
+        color: $colortext;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    &-img {
+        border-radius: 30px;
+        height: 314px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+        &_number {
+            background: url(img/card1.svg);
+        }
+    
+        &_math {
+            background: url(img/card2.svg);
+        }
+    
+        &_text {
+            background: url(img/card3.svg);
+        }
+    
+        &_skp {
+            background: url(img/card4.svg);
+        }
+    
+        &_quiz {
+            background: url(img/card5.svg);
+        }
+    
+        &_random {
+            background: url(img/card6.svg);
+        }
+}
+}
