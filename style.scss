@@ -104,6 +104,15 @@ button {
 
 .for__games {
     background: $colortext;
+    padding-top: 94px;
+    padding-bottom: 50px;
+    border-bottom: darkolivegreen;
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 24px;
+    }
 
     &-title {
         color: rgb(255, 255, 255);
@@ -120,4 +129,92 @@ button {
         line-height: 32px;
         text-align: left;
     }
+
+    &-games {
+        padding-top: 63px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+    }
+}
+
+.games__card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 30px;
+    grid-column: span 4;
+
+    &:hover {
+        transform: scale(1.08);
+        transition: 0.3s;
+    }
+
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 32px 36px 32px;
+        gap: 26px;
+    }
+    
+    &-serial {
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+        color: $colortext;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%; 
+        text-align: left;
+
+        &-text {
+            padding: 8px 16px 10px 16px;
+        }
+
+        &_size {
+            width: 112px;
+            height: 36px;
+        }
+    }
+
+    &-title {
+        color: $colortext;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    &-img {
+        border-radius: 30px;
+        height: 314px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+        &_number {
+            background: url(img/card1.svg);
+        }
+    
+        &_math {
+            background: url(img/card2.svg);
+        }
+    
+        &_text {
+            background: url(img/card3.svg);
+        }
+    
+        &_skp {
+            background: url(img/card4.svg);
+        }
+    
+        &_quiz {
+            background: url(img/card5.svg);
+        }
+    
+        &_random {
+            background: url(img/card6.svg);
+        }
+}
 }
