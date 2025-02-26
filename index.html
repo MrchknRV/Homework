@@ -5,10 +5,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <header class="header center">
+        <div class="header__content">
+            <h1 class="header__title">Добро пожаловать<br> на мой сайт мини-игр</h1>
+            <p class="header__text">Тебе предстоит пройти несколько увлекательных игр.<br> Если готов, нажимай
+                <span class="header__text_color">«Поехали!»</span> и
+                <span class="header__text_color">приступай</span>.
+            </p>
+            <a href="#for_games"><button class="button header__button">Поехали!</button></a>
+        </div>
+    </header>
+    <section class="header__runningline">
+        <div class="header__runningline-text">Викторина</div>
+        <svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="Star" d="M18 0L13.13 13.13L0 18L13.13 22.86L18 36L22.86 22.86L36 18L22.86 13.13L18 0Z"
+                fill="#202027" fill-opacity="1.000000" fill-rule="evenodd" />
+        </svg>
+        <div class="header__runningline-text">угадай число</div>
+        <svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="Star" d="M18 0L13.13 13.13L0 18L13.13 22.86L18 36L22.86 22.86L36 18L22.86 13.13L18 0Z"
+                fill="#202027" fill-opacity="1.000000" fill-rule="evenodd" />
+        </svg>
+        <div class="header__runningline-text">Переверни текст</div>
+        <svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="Star" d="M18 0L13.13 13.13L0 18L13.13 22.86L18 36L22.86 22.86L36 18L22.86 13.13L18 0Z"
+                fill="#202027" fill-opacity="1.000000" fill-rule="evenodd" />
+        </svg>
+        <div class="header__runningline-text">Простая арифметика</div>
+        <svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="Star" d="M18 0L13.13 13.13L0 18L13.13 22.86L18 36L22.86 22.86L36 18L22.86 13.13L18 0Z"
+                fill="#202027" fill-opacity="1.000000" fill-rule="evenodd" />
+        </svg>
+        <div class="header__runningline-text">Камень, ножницы, бумага</div>
+        <svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="Star" d="M18 0L13.13 13.13L0 18L13.13 22.86L18 36L22.86 22.86L36 18L22.86 13.13L18 0Z"
+                fill="#202027" fill-opacity="1.000000" fill-rule="evenodd" />
+        </svg>
+        <div class="header__runningline-text">Генератор случайных цветов</div>
+        <svg width="36.000000" height="36.000000" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="Star" d="M18 0L13.13 13.13L0 18L13.13 22.86L18 36L22.86 22.86L36 18L22.86 13.13L18 0Z"
+                fill="#202027" fill-opacity="1.000000" fill-rule="evenodd" />
+        </svg>
+    </section>
+    <section class="for__games center">
+        <div class="for__games-content">
+            <h2 class="for__games-title" id="for_games">Об играх</h2>
+            <p class="for__games-text">В моей коллекции представлено 6 игр на разные темы.<br>
+                Игры несложные — в них может поиграть каждый.<br>
+                Все игры доступны для пользования.</p>
+        </div>
+        <div class="for__games-games">
+            <a href="#guess-number" class="games__card">
+                <div class="games__card-img games__card-img_number"></div>
+                <div class="games__card-content">
+                    <div class="games__card-serial games__card-serial_size">
+                        <p class="games__card-serial-text">Игра № 1</p>
+                    </div>
+                    <div class="games__card-title">Угадай число</div>
+                </div>
+            </a>
+            <a href="#math" class="games__card">
+                <div class="games__card-img games__card-img_math"></div>
+                <div class="games__card-content">
+                    <div class="games__card-serial games__card-serial_size">
+                        <p class="games__card-serial-text">Игра № 2</p>
+                    </div>
+                    <div class="games__card-title">Простая арифметика</div>
+                </div>
+            </a>
+            <a href="#reverse-text" class="games__card">
+                <div class="games__card-img games__card-img_text"></div>
+                <div class="games__card-content">
+                    <div class="games__card-serial games__card-serial_size">
+                        <p class="games__card-serial-text">Игра № 3</p>
+                    </div>
+                    <div class="games__card-title">Переверни текст</div>
+                </div>
+            </a>
+            <a href="#skp" class="games__card">
+                <div class="games__card-img games__card-img_skp"></div>
+                <div class="games__card-content">
+                    <div class="games__card-serial games__card-serial_size">
+                        <p class="games__card-serial-text">Игра № 4</p>
+                    </div>
+                    <div class="games__card-title">Камень, ножницы,<br> бумага</div>
+                </div>
+            </a>
+            <a href="#quiz" class="games__card">
+                <div class="games__card-img games__card-img_quiz"></div>
+                <div class="games__card-content">
+                    <div class="games__card-serial games__card-serial_size">
+                        <p class="games__card-serial-text">Игра № 5</p>
+                    </div>
+                    <div class="games__card-title">Простая викторина</div>
+                </div>
+            </a>
+            <a href="#random-color" class="games__card">
+                <div class="games__card-img games__card-img_random"></div>
+                <div class="games__card-content">
+                    <div class="games__card-serial games__card-serial_size">
+                        <p class="games__card-serial-text">Игра № 6</p>
+                    </div>
+                    <div class="games__card-title">Генератор случайных цветов</div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="mini-games center">
+        <div class="mini-games__content">
+            <h2 class="mini-games__title">Мини-игры</h2>
+        </div>
+        <div class="mini-games__card" id="guess-number">
+            <div class="mini-games__card-left">
+                <div class="mini-games__card-content">
+                    <h3 class="mini-games__card-title">Угадай число</h3>
+                    <p class="mini-games__card-text">Попробуй угадать случайное число от 1 до 100.</p>
+                </div>
+                <button class="button games__card-button">Играть!</button>
+            </div>
+            <div class="mini-games__card-right">
+                <div class="mini-games__card-img mini-games__card-img_number"></div>
+            </div>
+        </div>
+        <div class="mini-games__card" id="math">
+            <div class="mini-games__card-left  mini-games__card-left_reverse">
+                <div class="mini-games__card-content">
+                    <h3 class="mini-games__card-title">Простая арифметика</h3>
+                    <p class="mini-games__card-text">Попробуй решить простые арифметические задачи.</p>
+                </div>
+                <button class="button games__card-button">Играть!</button>
+            </div>
+            <div class="mini-games__card-right">
+                <div class="mini-games__card-img mini-games__card-img_math"></div>
+            </div>
+        </div>
+        <div class="mini-games__card" id="reverse-text">
+            <div class="mini-games__card-left">
+                <div class="mini-games__card-content">
+                    <h3 class="mini-games__card-title">Переверни текст</h3>
+                    <p class="mini-games__card-text">Попробуй ввести текст, который будет перевернут.</p>
+                </div>
+                <button class="button games__card-button">Играть!</button>
+            </div>
+            <div class="mini-games__card-right">
+                <div class="mini-games__card-img mini-games__card-img_text"></div>
+            </div>
+        </div>
+        <div class="mini-games__card" id="quiz">
+            <div class="mini-games__card-left  mini-games__card-left_reverse">
+                <div class="mini-games__card-content">
+                    <h3 class="mini-games__card-title">Викторина</h3>
+                    <p class="mini-games__card-text">Отвечай на вопросы викторины с вариантами ответов.</p>
+                </div>
+                <button class="button games__card-button">Играть!</button>
+            </div>
+            <div class="mini-games__card-right">
+                <div class="mini-games__card-img mini-games__card-img_quiz"></div>
+            </div>
+        </div>
+        <div class="mini-games__card" id="skp">
+            <div class="mini-games__card-left">
+                <div class="mini-games__card-content">
+                    <h3 class="mini-games__card-title">Камень,<br> ножницы,<br> бумага</h3>
+                    <p class="mini-games__card-text">Сыграй в популярную игру против компьютера.</p>
+                </div>
+                <button class="button games__card-button">Играть!</button>
+            </div>
+            <div class="mini-games__card-right">
+                <div class="mini-games__card-img mini-games__card-img_skp"></div>
+            </div>
+        </div>
+        <div class="mini-games__card" id="random-color">
+            <div class="mini-games__card-left  mini-games__card-left_reverse">
+                <div class="mini-games__card-content">
+                    <h3 class="mini-games__card-title">Генератор случайных цветов</h3>
+                    <p class="mini-games__card-text">Игра, в которой при клике на кнопку фон страницы меняется на
+                        случайный.</p>
+                </div>
+                <button class="button games__card-button">Играть!</button>
+            </div>
+            <div class="mini-games__card-right">
+                <div class="mini-games__card-img mini-games__card-img_random"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer center">
+        <div class="footer__content">
+            <p class="footer__content-text">Все права защищены.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

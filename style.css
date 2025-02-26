@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  width: 247px;
+  height: 66px;
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+}
+.button:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(32, 32, 39);
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.header {
+  position: relative;
+  height: 800px;
+  background: rgb(225, 255, 143);
+  background-image: url(img/star_right.png), url(img/star_leftmini.png), url(img/starbig.svg);
+  background-position: 69px 63px, calc(100% - 344px) calc(100% - 149px), calc(100% + 450px) calc(100% - 0px);
+  background-repeat: no-repeat;
+}
+.header__content {
+  padding-top: 196px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.header__title {
+  color: rgb(32, 32, 39);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+.header__text {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+.header__text_color {
+  font-weight: bold;
+}
+.header__runningline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 51px;
+  width: 3220px;
+  height: 90px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background: rgb(188, 236, 48);
+  overflow: hidden;
+  padding-left: 51px;
+  padding-right: 51px;
+}
+.header__runningline-text {
+  color: rgb(32, 32, 39);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 4%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.for__games {
+  background: rgb(32, 32, 39);
+  background-image: url(img/forgamestarBig.svg), url(img/forgamesstarmini.png);
+  background-position: calc(100% - 50px) calc(100% - 870px), 135px 800px;
+  background-repeat: no-repeat;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+.for__games-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 24px;
+}
+.for__games-title {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+.for__games-text {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+.for__games-games {
+  padding-top: 63px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+.games__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 30px;
+  grid-column: span 4;
+}
+.games__card:hover {
+  transform: scale(1.08);
+  transition: 0.3s;
+}
+.games__card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 32px 36px 32px;
+  gap: 26px;
+}
+.games__card-serial {
+  border-radius: 52.58px;
+  background: rgb(247, 247, 247);
+  color: rgb(32, 32, 39);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+  text-align: left;
+}
+.games__card-serial-text {
+  padding: 8px 16px 10px 16px;
+}
+.games__card-serial_size {
+  width: 112px;
+  height: 36px;
+}
+.games__card-title {
+  color: rgb(32, 32, 39);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.games__card-img {
+  border-radius: 30px;
+  height: 314px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.games__card-img_number {
+  background: url(img/card1.svg);
+}
+.games__card-img_math {
+  background: url(img/card2.svg);
+}
+.games__card-img_text {
+  background: url(img/card3.svg);
+}
+.games__card-img_skp {
+  background: url(img/card4.svg);
+}
+.games__card-img_quiz {
+  background: url(img/card5.svg);
+}
+.games__card-img_random {
+  background: url(img/card6.svg);
+}
+
+.mini-games {
+  background: rgb(32, 32, 39);
+  border-top: 1px solid rgb(64, 85, 2);
+  padding-top: 46px;
+  padding-bottom: 144px;
+}
+.mini-games__title {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+.mini-games__card {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border-radius: 30px;
+  box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+  background: rgb(255, 255, 255);
+  margin-top: 72px;
+}
+.mini-games__card-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-column: span 6;
+  gap: 36px;
+  padding: 48px;
+}
+.mini-games__card-left_reverse {
+  order: 1;
+}
+.mini-games__card-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.mini-games__card-title {
+  color: rgb(32, 32, 39);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  text-align: left;
+}
+.mini-games__card-text {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+.mini-games__card-right {
+  grid-column: span 6;
+}
+.mini-games__card-img {
+  border-radius: 30px;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mini-games__card-img_number {
+  background: url(img/games1.svg);
+}
+.mini-games__card-img_math {
+  background: url(img/games2.svg);
+  order: 1;
+}
+.mini-games__card-img_text {
+  background: url(img/games3.svg);
+}
+.mini-games__card-img_quiz {
+  background: url(img/games4.svg);
+}
+.mini-games__card-img_skp {
+  background: url(img/games5.svg);
+}
+.mini-games__card-img_random {
+  background: url(img/games6.svg);
+}
+
+.footer {
+  background: rgb(189, 237, 53);
+  height: 150px;
+}
+.footer__content {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+html {
+  scroll-behavior: smooth;
+}/*# sourceMappingURL=style.css.map */
