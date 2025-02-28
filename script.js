@@ -29,3 +29,34 @@ alert(`Сумма ${num1} и ${num2} равна ${summ},
 let num = 2;
 let result = num ** 5;
 alert(result)
+
+// Task 6
+let A = 9;
+let B = 2;
+alert(A % 9);
+
+// Task 7
+let numb = 1;
+numb += 5;
+numb -= 3;
+numb *= 7;
+numb /= 3;
+numb++;
+numb--;
+alert(num);
+
+// Task 8
+let age = prompt("Сколько вам лет?")
+alert(age)
+
+// Task 9
+const user = {
+    Name: 'Rodion',
+    Age: 23,
+    isAdmin: False
+}
+alert(user.Name, user.Age)
+
+// Task 10
+let NAME = prompt("What's your name?")
+alert(`Hello, ${NAME}`)
