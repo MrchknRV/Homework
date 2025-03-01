@@ -31,9 +31,9 @@ let result = num ** 5;
 alert(result)
 
 // Task 6
-let A = 9;
-let B = 2;
-alert(A % 9);
+let aa = 9;
+let bb = 2;
+alert(aa % bb);
 
 // Task 7
 let numb = 1;
@@ -51,11 +51,11 @@ alert(age)
 
 // Task 9
 const user = {
-    Name: 'Rodion',
-    Age: 23,
-    isAdmin: False
+    nname: 'Rodion',
+    aage: 23,
+    isAdmin: false
 }
-alert(user.Name, user.Age)
+alert(`${user.nname} - ${user.aage}`)
 
 // Task 10
 let NAME = prompt("What's your name?")

@@ -37,6 +37,7 @@
             line-height: 20px;
             text-align: center;
             padding-bottom: 36px;
+            max-width: 296px;
         }
 
         &__button {
@@ -54,7 +55,7 @@
         &__title {
             font-size: 40px;
             line-height: 49px;
-            padding-bottom: 40px;
+            padding-bottom: 48px;
         }
 
         &__app {
@@ -73,7 +74,7 @@
                 grid-column: span 4;
                 order: 1;
             }
-            
+
             &-content {
                 gap: 16px;
             }
@@ -90,11 +91,36 @@
 
             &-img {
                 max-height: 285px;
+
+                &_number {
+                    background: url(img/games_mobile1.svg);
+                }
+
+                &_math {
+                    background: url(img/games_mobile2.svg);
+                }
+
+                &_text {
+                    background: url(img/games_mobile3.svg);
+                }
+
+                &_quiz {
+                    background: url(img/games_mobile4.svg);
+                }
+
+                &_skp {
+                    background: url(img/games_mobile5.svg);
+                }
+
+                &_random {
+                    background: url(img/games_mobile6.svg);
+                }
+
             }
         }
     }
 
-    .header__runningline {
+    .runningline {
         height: 50px;
         gap: 27px;
         padding: 16px 24px 16px 24px;
