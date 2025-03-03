@@ -1,0 +1,170 @@
+@media (max-width: 767px) {
+    .center {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .button {
+        width: 285px;
+        height: 55px;
+        font-size: 16px;
+
+        &:hover {
+            display: none;
+        }
+    }
+
+    .header {
+        padding-bottom: 131px;
+        background-image: none;
+        background-image:url(img/star_right_mobile.svg), url(img/star_left_mobile.svg), url(img/bigstar_mobile.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 265px) calc(100% - 520px), calc(100% - 35px) calc(100% - 25px), calc(100% + 90px) calc(100% - 495px);
+
+
+        &__content {
+            padding-top: 147px;
+            align-items: center;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            padding-bottom: 36px;
+            max-width: 296px;
+        }
+
+        &__button {
+            display: none;
+
+            &_mobile {
+                display: block;
+            }
+        }
+    }
+
+    .mini-games {
+        padding-bottom: 48px;
+
+        &__title {
+            font-size: 40px;
+            line-height: 49px;
+            padding-bottom: 48px;
+        }
+
+        &__app {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        &__card {
+            grid-template-columns: repeat(4, 1fr);
+
+            &-left {
+                padding: 30px;
+                gap: 32px;
+                grid-column: span 4;
+                order: 1;
+            }
+
+            &-content {
+                gap: 16px;
+            }
+
+            &-title {
+                font-size: 32px;
+                line-height: 39px;
+            }
+
+            &-text {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &-img {
+                max-height: 285px;
+
+                &_number {
+                    background: url(img/games_mobile1.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                &_math {
+                    background: url(img/games_mobile2.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                &_text {
+                    background: url(img/games_mobile3.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                &_quiz {
+                    background: url(img/games_mobile4.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                &_skp {
+                    background: url(img/games_mobile5.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                &_random {
+                    background: url(img/games_mobile6.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+            }
+        }
+    }
+
+    .runningline {
+        height: 50px;
+        gap: 27px;
+        padding: 16px 24px 16px 24px;
+
+
+        &-text {
+            font-size: 16px;
+        }
+    }
+
+    .svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .for__games {
+        display: none;
+    }
+
+    .footer {
+        &__content {
+            font-size: 16px;
+            line-height: 20px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+}

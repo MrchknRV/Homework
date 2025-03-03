@@ -44,11 +44,11 @@ button {
 
 .header {
     position: relative;
-    height: 800px;
     background: rgb(225, 255, 143);
     background-image: url(img/star_right.png), url(img/star_leftmini.png), url(img/starbig.svg);
     background-position: 69px 63px, calc(100% - 344px) calc(100% - 149px), calc(100% + 450px) calc(100% - 0px);
     background-repeat: no-repeat;
+    padding-bottom: 156px;
 
     &__content {
         padding-top: 196px;
@@ -73,36 +73,46 @@ button {
         text-align: left;
         padding-top: 24px;
         padding-bottom: 48px;
+        max-width: 720px;
 
         &_color {
             font-weight: bold;
         }
     }
 
-    &__runningline {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 51px;
-        width: 3220px;
-        height: 90px;
-        box-sizing: border-box;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(50px);
-        background: rgb(188, 236, 48);
-        overflow: hidden;
-        padding-left: 51px;
-        padding-right: 51px;
 
-        &-text {
-            color: $colortext;
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 110%;
-            letter-spacing: 4%;
-            text-align: left;
-            text-transform: uppercase;
-        }
+    &__button_mobile {
+        display: none;
+    }
+}
+
+.runningline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 51px;
+    width: 3220px;
+    height: 90px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    background: rgb(188, 236, 48);
+    padding-left: 51px;
+    padding-right: 51px;
+
+    &__block {
+        overflow: hidden;
+    }
+
+    &-text {
+        color: $colortext;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 4%;
+        text-align: left;
+        text-transform: uppercase;
+
     }
 }
 
@@ -113,6 +123,7 @@ button {
     background-repeat: no-repeat;
     padding-top: 94px;
     padding-bottom: 50px;
+
     &-content {
         display: flex;
         flex-wrap: wrap;
@@ -163,14 +174,14 @@ button {
         padding: 32px 32px 36px 32px;
         gap: 26px;
     }
-    
+
     &-serial {
         border-radius: 52.58px;
         background: rgb(247, 247, 247);
         color: $colortext;
         font-size: 16px;
         font-weight: 500;
-        line-height: 110%; 
+        line-height: 110%;
         text-align: left;
 
         &-text {
@@ -195,39 +206,58 @@ button {
     &-img {
         border-radius: 30px;
         height: 314px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center;
+
         &_number {
             background: url(img/card1.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-    
+
         &_math {
             background: url(img/card2.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-    
+
         &_text {
             background: url(img/card3.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-    
+
         &_skp {
             background: url(img/card4.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-    
+
         &_quiz {
             background: url(img/card5.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-    
+
         &_random {
             background: url(img/card6.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-}
+    }
 }
 
 .mini-games {
     background: $colortext;
-    border-top: 1px solid rgb(64, 85, 2);;
+    border-top: 1px solid rgb(64, 85, 2);
+    ;
     padding-top: 46px;
     padding-bottom: 144px;
 
@@ -237,6 +267,14 @@ button {
         font-weight: 700;
         line-height: 78px;
         text-align: left;
+        padding-bottom: 72px;
+    }
+
+    &__app {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 32px;
     }
 
     &__card {
@@ -245,12 +283,12 @@ button {
         border-radius: 30px;
         box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
         background: rgb(255, 255, 255);
-        margin-top: 72px;
-        
+
         &-left {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
+            align-items: center;
             grid-column: span 6;
             gap: 36px;
             padding: 48px;
@@ -258,7 +296,7 @@ button {
             &_reverse {
                 order: 1;
             }
-            
+
         }
 
         &-content {
@@ -284,54 +322,67 @@ button {
             text-align: left;
         }
 
-        &-right{
+        &-right {
             grid-column: span 6;
         }
-
-        // &-img {
-        //     width: 100%;
-        // }
 
         &-img {
             border-radius: 30px;
             height: 500px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: center;
 
             &_number {
                 background: url(img/games1.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
             &_math {
                 background: url(img/games2.svg);
                 order: 1;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
             &_text {
                 background: url(img/games3.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
             &_quiz {
                 background: url(img/games4.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
-            &_skp{
+            &_skp {
                 background: url(img/games5.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
-            &_random{
+            &_random {
                 background: url(img/games6.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
         }
     }
 
-    
+
 }
 
 .footer {
     background: rgb(189, 237, 53);
-    height: 150px;
 
     &__content {
         color: rgb(0, 0, 0);
@@ -347,3 +398,5 @@ button {
 html {
     scroll-behavior: smooth;
 }
+
+@import 'mobile';
