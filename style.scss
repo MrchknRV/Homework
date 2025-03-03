@@ -206,32 +206,50 @@ button {
     &-img {
         border-radius: 30px;
         height: 314px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center;
 
         &_number {
             background: url(img/card1.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         &_math {
             background: url(img/card2.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         &_text {
             background: url(img/card3.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         &_skp {
             background: url(img/card4.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         &_quiz {
             background: url(img/card5.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         &_random {
             background: url(img/card6.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 }
@@ -270,6 +288,7 @@ button {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
+            align-items: center;
             grid-column: span 6;
             gap: 36px;
             padding: 48px;
@@ -307,40 +326,54 @@ button {
             grid-column: span 6;
         }
 
-        // &-img {
-        //     width: 100%;
-        // }
-
         &-img {
             border-radius: 30px;
             height: 500px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: center;
 
             &_number {
                 background: url(img/games1.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
             &_math {
                 background: url(img/games2.svg);
                 order: 1;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
             &_text {
                 background: url(img/games3.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
             &_quiz {
                 background: url(img/games4.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
             &_skp {
                 background: url(img/games5.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
 
             &_random {
                 background: url(img/games6.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
         }
     }

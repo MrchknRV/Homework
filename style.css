@@ -184,27 +184,42 @@ button {
 .games__card-img {
   border-radius: 30px;
   height: 314px;
+}
+.games__card-img_number {
+  background: url(img/card1.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.games__card-img_number {
-  background: url(img/card1.svg);
-}
 .games__card-img_math {
   background: url(img/card2.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .games__card-img_text {
   background: url(img/card3.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .games__card-img_skp {
   background: url(img/card4.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .games__card-img_quiz {
   background: url(img/card5.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .games__card-img_random {
   background: url(img/card6.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .mini-games {
@@ -238,6 +253,7 @@ button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   grid-column: span 6;
   gap: 36px;
   padding: 48px;
@@ -271,28 +287,43 @@ button {
 .mini-games__card-img {
   border-radius: 30px;
   height: 500px;
+}
+.mini-games__card-img_number {
+  background: url(img/games1.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.mini-games__card-img_number {
-  background: url(img/games1.svg);
-}
 .mini-games__card-img_math {
   background: url(img/games2.svg);
   order: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .mini-games__card-img_text {
   background: url(img/games3.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .mini-games__card-img_quiz {
   background: url(img/games4.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .mini-games__card-img_skp {
   background: url(img/games5.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .mini-games__card-img_random {
   background: url(img/games6.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer {
@@ -328,6 +359,9 @@ html {
   .header {
     padding-bottom: 131px;
     background-image: none;
+    background-image: url(img/star_right_mobile.svg), url(img/star_left_mobile.svg), url(img/bigstar_mobile.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 265px) calc(100% - 520px), calc(100% - 35px) calc(100% - 25px), calc(100% + 90px) calc(100% - 495px);
   }
   .header__content {
     padding-top: 147px;
@@ -390,21 +424,39 @@ html {
   }
   .mini-games__card-img_number {
     background: url(img/games_mobile1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .mini-games__card-img_math {
     background: url(img/games_mobile2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .mini-games__card-img_text {
     background: url(img/games_mobile3.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .mini-games__card-img_quiz {
     background: url(img/games_mobile4.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .mini-games__card-img_skp {
     background: url(img/games_mobile5.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .mini-games__card-img_random {
     background: url(img/games_mobile6.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .runningline {
     height: 50px;
