@@ -31,46 +31,75 @@ let b = '3';
 alert(Number(a) + Number(b));
 
 // Task 5
-let month_number = 12
+let month_number = 12;
 switch (month_number) {
     case 1:
         console.log('зима');
-        break
+        break;
     case 2:
         console.log('зима');
-        break
+        break;
     case 3:
         console.log('весна');
-        break
+        break;
     case 4:
         console.log('весна');
-        break
+        break;
     case 5:
         console.log('весна');
-        break
+        break;
     case 6:
         console.log('лето');
-        break
+        break;
     case 7:
         console.log('лето');
-        break
+        break;
     case 8:
         console.log('лето');
-        break
+        break;
     case 9:
         console.log('осень');
-        break
+        break;
     case 10:
         console.log('осень');
-        break
+        break;
     case 11:
         console.log('осень');
-        break
+        break;
     case 12:
         console.log('зима');
-        break
+        break;
     
     default:
         console.log("Нет такого");
             
 }
+
+// // Additional Task 1
+// let number = prompt("Пожалуйста, введите любое число");
+// if (Number(number) % 2 == 0) {
+//     alert("Число четное")
+// } else {
+//     alert("Число нечетное")
+// }
+
+// // Additional Task 2
+// let clientOS = 0;
+// if (clientOS === 0) {
+//     alert("Установите версию приложения для iOS по ссылке")
+// } else {
+//     alert("Установите версию приложения для Android по ссылке")
+// }
+
+// // Additional Task 3
+// let client_OS
+// let clientDeviceYear = 2015;
+// if (client_OS === 0 && clientDeviceYear < 2015) {
+//     alert("Установите облегченную версию приложения для iOS по ссылке")
+// } else if (client_OS === 1 && clientDeviceYear < 2015) {
+//     alert("Установите облегченную версию приложения для Android по ссылке")
+// } else if (client_OS === 0 && clientDeviceYear >= 2015) {
+//     alert("Установите версию приложения для iOS по ссылке")
+// }else {
+//     alert("Установите версию приложения для Android по ссылке")
+// }
