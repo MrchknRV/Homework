@@ -16,12 +16,20 @@
 //     console.log(i);
 //     i++
 // }
-// Task 4
-let obj = {
-    "Коля" : '200',
-    "Вася" : '300',
-    "Петя" : '400',
+// // Task 4
+// let obj = {
+//     "Коля" : '200',
+//     "Вася" : '300',
+//     "Петя" : '400',
+// }
+// for (let key in obj){
+//     console.log(`${key} - зарплата ${obj[key]} долларов`);
+// }
+// Task 5
+let num = 0;
+let n = 1000;
+while (n > 50){
+    num++
+    n /= 2
 }
-for (let key in obj){
-    console.log(`${key} - зарплата ${obj[key]} долларов`);
-}
+console.log(`Кол-во итерацией ${num}, полученное число ${n}`);
