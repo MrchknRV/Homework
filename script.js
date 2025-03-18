@@ -4,9 +4,15 @@
 //     console.log('Привет');
 //     i++
 // }
-// Task 2
-let i = 1;
-while (i <= 5){
+// // Task 2
+// let i = 1;
+// while (i <= 5){
+//     console.log(i);
+//     i++
+// }
+// Task 3
+let i = 7;
+while (i <= 22){
     console.log(i);
     i++
 }
