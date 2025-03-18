@@ -33,8 +33,28 @@
 //     n /= 2
 // }
 // console.log(`Кол-во итерацией ${num}, полученное число ${n}`);
-// Task 6
-const friday = 2;
-for (let day = friday; day <= 31; day += 7 ){
-    console.log(`Сегодня пятница ${day}-e число. Необходимо подготовить еженедельный отчет`);
+// // Task 6
+// const friday = 2;
+// for (let day = friday; day <= 31; day += 7 ){
+//     console.log(`Сегодня пятница ${day}-e число. Необходимо подготовить еженедельный отчет`);
+// }
+
+// // Additional task 1
+// let k = 100;
+// let count = 0;
+// while (k > 0) {
+//     count++
+//     k -= 7
+// }
+
+// console.log(`Получившиеся число ${k}, кол-во  итераций - ${count}`);
+
+// Additional task 3
+const describingBookObject = {
+    title: "Faust",
+    author: "Johann Wolfgang von Goethe",
+    "year of publication": 1790,
+}
+for (let key in describingBookObject) {
+    console.log(`${key} - ${describingBookObject[key]}`);
 }
