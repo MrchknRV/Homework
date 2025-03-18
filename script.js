@@ -10,9 +10,18 @@
 //     console.log(i);
 //     i++
 // }
-// Task 3
-let i = 7;
-while (i <= 22){
-    console.log(i);
-    i++
+// // Task 3
+// let i = 7;
+// while (i <= 22){
+//     console.log(i);
+//     i++
+// }
+// Task 4
+let obj = {
+    "Коля" : '200',
+    "Вася" : '300',
+    "Петя" : '400',
+}
+for (let key in obj){
+    console.log(`${key} - зарплата ${obj[key]} долларов`);
 }
