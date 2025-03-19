@@ -99,9 +99,22 @@ button {
     background: rgb(188, 236, 48);
     padding-left: 51px;
     padding-right: 51px;
+    animation: marquee 15s linear infinite;
+    
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+    
+}
 
     &__block {
         overflow: hidden;
+        background: rgb(188, 236, 48);
     }
 
     &-text {

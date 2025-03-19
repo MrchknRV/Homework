@@ -91,9 +91,19 @@ button {
   background: rgb(188, 236, 48);
   padding-left: 51px;
   padding-right: 51px;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 .runningline__block {
   overflow: hidden;
+  background: rgb(188, 236, 48);
 }
 .runningline-text {
   color: rgb(32, 32, 39);
@@ -383,6 +393,9 @@ html {
   }
   .header__button_mobile {
     display: block;
+  }
+  .runningline {
+    animation: marquee 20s linear infinite;
   }
   .mini-games {
     padding-bottom: 48px;
