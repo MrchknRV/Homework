@@ -55,8 +55,3 @@
 //     aage: 23,
 //     isAdmin: false
 // }
-// alert(`${user.nname} - ${user.aage}`)
-
-// // Task 10
-// let NAME = prompt("What's your name?")
-// alert(`Hello, ${NAME}`)
