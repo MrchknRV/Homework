@@ -1,105 +1,60 @@
-// Task 1
-let password = 'пароль'
-let user_password = String(prompt("Введите пароль:"))
-if (password !== user_password.toLocaleLowerCase()){
-    alert("Пароль введен неправильно")
-} else {
-    alert("Пароль введен верно")
-}
-
-// Task 2
-let c = 2;
-if (c > 0 && c < 10) {
-    console.log("Верно");
-} else {
-    console.log("Неверно");
-}
-
-// Task 3
-let d = 20;
-let e = 1;
-if (d > 100 || e > 100) {
-    console.log("Верно");
-} else {
-    console.log("Неверно");
-}
-
-// Task 4
-let a = '2';
-let b = '3';
-// Код выше изменять менять нельзя. Чтобы решить задачу исправьте код ниже:
-alert(Number(a) + Number(b));
-
-// Task 5
-let month_number = 12;
-switch (month_number) {
-    case 1:
-        console.log('зима');
-        break;
-    case 2:
-        console.log('зима');
-        break;
-    case 3:
-        console.log('весна');
-        break;
-    case 4:
-        console.log('весна');
-        break;
-    case 5:
-        console.log('весна');
-        break;
-    case 6:
-        console.log('лето');
-        break;
-    case 7:
-        console.log('лето');
-        break;
-    case 8:
-        console.log('лето');
-        break;
-    case 9:
-        console.log('осень');
-        break;
-    case 10:
-        console.log('осень');
-        break;
-    case 11:
-        console.log('осень');
-        break;
-    case 12:
-        console.log('зима');
-        break;
-    
-    default:
-        console.log("Нет такого");
-            
-}
-
-// // Additional Task 1
-// let number = prompt("Пожалуйста, введите любое число");
-// if (Number(number) % 2 == 0) {
-//     alert("Число четное")
-// } else {
-//     alert("Число нечетное")
+// // Task 1
+// let i = 0;
+// while (i < 2){
+//     console.log('Привет');
+//     i++
+// }
+// // Task 2
+// let i = 1;
+// while (i <= 5){
+//     console.log(i);
+//     i++
+// }
+// // Task 3
+// let i = 7;
+// while (i <= 22){
+//     console.log(i);
+//     i++
+// }
+// // Task 4
+// let obj = {
+//     "Коля" : '200',
+//     "Вася" : '300',
+//     "Петя" : '400',
+// }
+// for (let key in obj){
+//     console.log(`${key} - зарплата ${obj[key]} долларов`);
+// }
+// // Task 5
+// let num = 0;
+// let n = 1000;
+// while (n > 50){
+//     num++
+//     n /= 2
+// }
+// console.log(`Кол-во итерацией ${num}, полученное число ${n}`);
+// // Task 6
+// const friday = 2;
+// for (let day = friday; day <= 31; day += 7 ){
+//     console.log(`Сегодня пятница ${day}-e число. Необходимо подготовить еженедельный отчет`);
 // }
 
-// // Additional Task 2
-// let clientOS = 0;
-// if (clientOS === 0) {
-//     alert("Установите версию приложения для iOS по ссылке")
-// } else {
-//     alert("Установите версию приложения для Android по ссылке")
+// // Additional task 1
+// let k = 100;
+// let count = 0;
+// while (k > 0) {
+//     count++
+//     k -= 7
 // }
 
-// // Additional Task 3
-// let client_OS
-// let clientDeviceYear = 2015;
-// if (client_OS === 0 && clientDeviceYear < 2015) {
-//     alert("Установите облегченную версию приложения для iOS по ссылке")
-// } else if (client_OS === 1 && clientDeviceYear < 2015) {
-//     alert("Установите облегченную версию приложения для Android по ссылке")
-// } else if (client_OS === 0 && clientDeviceYear >= 2015) {
-//     alert("Установите версию приложения для iOS по ссылке")
-// }else {
-//     alert("Установите версию приложения для Android по ссылке")
-// }
+// console.log(`Получившиеся число ${k}, кол-во  итераций - ${count}`);
+
+// Additional task 3
+const describingBookObject = {
+    title: "Faust",
+    author: "Johann Wolfgang von Goethe",
+    "year of publication": 1790,
+}
+for (let key in describingBookObject) {
+    console.log(`${key} - ${describingBookObject[key]}`);
+}
