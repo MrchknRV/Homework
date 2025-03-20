@@ -111,3 +111,12 @@ const guessingGame = () => {
 // };
 
 // console.log(isEven(3));
+
+//Task 3
+//1
+// const squareNumber = (num) => console.log(num ** 2);
+// squareNumber(5);
+//2
+// const squareNumber = (num) => num ** 2;
+// let numberSquare = squareNumber(5);
+// console.log(numberSquare);
