@@ -161,3 +161,25 @@ const guessingGame = () => {
 // for (let i = 0; i <= 10; i++) {
 //   console.log(cubOfNamber(i));
 // }
+
+// // Task 7
+// function getArea() {
+//   return Math.PI * this.radius ** 2;
+// }
+// function getPerimeter() {
+//   return 2 * Math.PI * this.radius;
+// }
+
+// const circle_1 = {
+//   radius: 8,
+//   getArea: getArea,
+//   getPerimeter: getPerimeter,
+// };
+// const circle_2 = {
+//   radius: 15,
+//   getArea: getArea,
+//   getPerimeter: getPerimeter,
+// };
+
+// console.log(circle_1.getArea().toFixed(2), circle_1.getPerimeter().toFixed(2));
+// console.log(circle_2.getArea().toFixed(2), circle_2.getPerimeter().toFixed(2));
