@@ -135,7 +135,7 @@ const guessingGame = () => {
 
 // validAge();
 
-//Task5
+// //Task5
 // const composition = () => {
 //   let num_1 = prompt("Введите первое число");
 //   let num_2 = prompt("Введите второе число");
@@ -147,3 +147,17 @@ const guessingGame = () => {
 // };
 
 // console.log(composition());
+
+// //Task 6
+// const cubOfNamber = (num) => {
+//   //   let num = prompt("Введите число:");
+//   if (isNaN(num)) {
+//     return "Переданный параметр не является числом";
+//   } else {
+//     return `${num} в кубе равняется ${num ** 3}`;
+//   }
+// };
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(cubOfNamber(i));
+// }
