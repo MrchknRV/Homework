@@ -88,3 +88,15 @@ const guessingGame = () => {
     }
   }
 };
+// // Task 1
+// const maxNumber = (num_1, num_2) => {
+//   if (num_1 === num_2) {
+//     return num_1;
+//   } else if (num_1 > num_2) {
+//     return num_1;
+//   } else {
+//     return num_2;
+//   }
+// };
+
+// console.log(maxNumber(3, 5));
