@@ -100,3 +100,14 @@ const guessingGame = () => {
 // };
 
 // console.log(maxNumber(3, 5));
+
+// //Task 2
+// const isEven = (num) => {
+//   if (num % 2 == 0) {
+//     return "Число четное";
+//   } else {
+//     return "Число нечетное";
+//   }
+// };
+
+// console.log(isEven(3));
