@@ -40,7 +40,7 @@ const guessingGame = () => {
   let count = 0;
   let isFlag = true; // Почему-то через break не хотело останавливаться, пришлось вводить флаг
   while (isFlag) {
-    let userAnswer = prompt("Вводи число:"); //Запрашиваем ввод числа
+    let userAnswer = parseInt(prompt("Вводи число:")); //Запрашиваем ввод числа
 
     if (userAnswer == "Стоп" || userAnswer == "стоп") {
       alert("Хорошо, приходи, когда будет желание!");
@@ -120,3 +120,17 @@ const guessingGame = () => {
 // const squareNumber = (num) => num ** 2;
 // let numberSquare = squareNumber(5);
 // console.log(numberSquare);
+
+// //Task 4
+// const validAge = () => {
+//   let userAge = prompt("Сколько тебе лет?");
+//   if (userAge < 0) {
+//     alert("Вы ввели неправильное значение");
+//   } else if (userAge > 13) {
+//     alert("Добро пожаловать!");
+//   } else {
+//     alert("Привет, друг!");
+//   }
+// };
+
+// validAge();
