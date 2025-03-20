@@ -1,118 +1,90 @@
-// // Task 1
-// let a = 10;
-// alert(a);
-// a = 20;
-// alert(a);
+// Функция рандома числа в диапазоне
+const randomInt = (min, max) => {
+  let currentRandom = min + Math.random() * (max + 1 - min);
+  return Math.floor(currentRandom);
+};
 
-// // Task 2
-// let years = 2007;
-// alert(years);
+// Проверка ввода на "число" от пользователя
+const isNumber = (num) => isFinite(num);
 
-// // Task 3
-// let creatorJS = "Брендан Эйх";
-// alert(creatorJS);
+// Начало программы
+const startGame = () => {
+  let ans = confirm('Приветсвую тебя, хочешь сыграть в игру "Угадай число"?');
+  if (ans) {
+    gameRules();
+    guessingGame();
+  } else {
+    ans = confirm("Это не займёт много времени и сил. Давай попробуем!");
+    if (ans) {
+      gameRules();
+      guessingGame();
+    } else {
+      alert("Тогда приходи, когда будет желание сыграть!");
+    }
+  }
+};
 
-// // Task 4
-// let num1 = 10;
-// let num2 = 2;
-// let summ, differnce, multiplication, division;
-// summ = num1 + num2;
-// differnce = num1 - num2;
-// multiplication = num1 * num2;
-// division = num1 / num2;
-// alert(`Сумма ${num1} и ${num2} равна ${summ}, 
-// Разность ${num1} и ${num2} равна ${differnce},
-// Произведение ${num1} и ${num2} равна ${multiplication},
-// Деление ${num1} и ${num2} равна ${division}`);
+// Правила игры
+const gameRules = () => {
+  alert("Отлично, давай я ознакомлю тебя с правилами игры");
+  alert("Я загадаю число от 1 до 100, а ты будешь его отгадывать.");
+  alert("Вводить нужно будет только числа от 1 до 100");
+  alert("Если вдргу тебе надоест введи 'Cтоп' и все закончится");
+};
 
-// // Task 5
-// let num = 2;
-// let result = num ** 5;
-// alert(result)
+//Основная часть программы
+const guessingGame = () => {
+  let curNumber = randomInt(1, 100);
+  alert("И так, я загадал число, как ты думаешь, что за оно?");
+  let countUnvalid = 0;
+  let count = 0;
+  let isFlag = true; // Почему-то через break не хотело останавливаться, пришлось вводить флаг
+  while (isFlag) {
+    let userAnswer = prompt("Вводи число:"); //Запрашиваем ввод числа
 
-// // Task 6
-// let aa = 9;
-// let bb = 2;
-// alert(aa % bb);
+    if (userAnswer == "Стоп" || userAnswer == "стоп") {
+      alert("Хорошо, приходи, когда будет желание!");
+      isFlag = false;
+    } else {
+      let validUserAnswer = isNumber(userAnswer); // Проверяем валидность ввода
 
-// // Task 7
-// let numb = 1;
-// numb += 5;
-// numb -= 3;
-// numb *= 7;
-// numb /= 3;
-// numb++;
-// numb--;
-// alert(num);
+      if (validUserAnswer) {
+        count++;
 
-// // Task 8
-// let age = prompt("Сколько вам лет?")
-// alert(age)
+        if (userAnswer == curNumber) {
+          alert(`Верно! Ты угадал с ${count} попытки`);
+          alert("Скажи честно, ты подглядывал?:)");
 
-// // Task 9
-// const user = {
-//     nname: 'Rodion',
-//     aage: 23,
-//     isAdmin: false
-// }
+          if (confirm("Хочешь сыграть ещё раз?")) {
+            guessingGame();
+          } else {
+            alert("Приходи, когда появится желание сыграть снова :)");
+            isFlag = false;
+          }
+        } else if (userAnswer > curNumber) {
+          if (Math.abs(userAnswer - curNumber) < 5) {
+            alert("Многовато будет!\nТы близок");
+          } else {
+            alert("Ох, слишком много! Попробуй еще раз");
+          }
+        } else if (userAnswer < curNumber) {
+          if (Math.abs(userAnswer - curNumber) < 5) {
+            alert("Бери выше\nГорячо!");
+          } else {
+            alert("Эх, это слишком мало!");
+          }
+        }
+      } else {
+        alert("Ты ввел не число!");
+        countUnvalid++;
+      }
+    }
 
-// let i = 0;
-// while (i < 2){
-//     console.log('Привет');
-//     i++
-// }
-// // Task 2
-// let i = 1;
-// while (i <= 5){
-//     console.log(i);
-//     i++
-// }
-// // Task 3
-// let i = 7;
-// while (i <= 22){
-//     console.log(i);
-//     i++
-// }
-// // Task 4
-// let obj = {
-//     "Коля" : '200',
-//     "Вася" : '300',
-//     "Петя" : '400',
-// }
-// for (let key in obj){
-//     console.log(`${key} - зарплата ${obj[key]} долларов`);
-// }
-// // Task 5
-// let num = 0;
-// let n = 1000;
-// while (n > 50){
-//     num++
-//     n /= 2
-// }
-// console.log(`Кол-во итерацией ${num}, полученное число ${n}`);
-// // Task 6
-// const friday = 2;
-// for (let day = friday; day <= 31; day += 7 ){
-//     console.log(`Сегодня пятница ${day}-e число. Необходимо подготовить еженедельный отчет`);
-// }
-
-// // Additional task 1
-// let k = 100;
-// let count = 0;
-// while (k > 0) {
-//     count++
-//     k -= 7
-// }
-
-// console.log(`Получившиеся число ${k}, кол-во  итераций - ${count}`);
-
-// Additional task 3
-const describingBookObject = {
-    title: "Faust",
-    author: "Johann Wolfgang von Goethe",
-    "year of publication": 1790,
-}
-for (let key in describingBookObject) {
-    console.log(`${key} - ${describingBookObject[key]}`);
-}
-
+    if (countUnvalid === 5) {
+      // При неправильных 5 попытках ввода перезапуск
+      alert("Давай-ка я напомню тебе правила");
+      gameRules();
+      guessingGame();
+    }
+  }
+};
