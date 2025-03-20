@@ -134,3 +134,16 @@ const guessingGame = () => {
 // };
 
 // validAge();
+
+//Task5
+// const composition = () => {
+//   let num_1 = prompt("Введите первое число");
+//   let num_2 = prompt("Введите второе число");
+//   if (isNaN(num_1) || isNaN(num_2)) {
+//     return "Одно или оба значения не являются числом";
+//   } else {
+//     return num_1 * num_2;
+//   }
+// };
+
+// console.log(composition());
