@@ -38,14 +38,14 @@ const guessingGame = () => {
   alert("И так, я загадал число, как ты думаешь, что за оно?");
   let countUnvalid = 0;
   let count = 0;
-  let isFlag = true; // Почему-то через break не хотело останавливаться, пришлось вводить флаг
-  while (isFlag) {
-    let userAnswer = parseInt(prompt("Вводи число:")); //Запрашиваем ввод числа
+  while (true) {
+    let userInput = prompt("Вводи число:"); //Запрашиваем ввод числа
 
-    if (userAnswer == "Стоп" || userAnswer == "стоп") {
+    if (userInput == null || userInput.toLocaleLowerCase() === "стоп") {
       alert("Хорошо, приходи, когда будет желание!");
-      isFlag = false;
+      break;
     } else {
+      const userAnswer = parseInt(userInput);
       let validUserAnswer = isNumber(userAnswer); // Проверяем валидность ввода
 
       if (validUserAnswer) {
@@ -59,7 +59,7 @@ const guessingGame = () => {
             guessingGame();
           } else {
             alert("Приходи, когда появится желание сыграть снова :)");
-            isFlag = false;
+            break;
           }
         } else if (userAnswer > curNumber) {
           if (Math.abs(userAnswer - curNumber) < 5) {
