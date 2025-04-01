@@ -197,6 +197,9 @@ function SimpleArithmeticGame() {
 //     console.log(array[i]);
 //   }
 // }
-//Task 2
-let array = [1, 5, 4, 10, 0, 3];
-console.log(array.indexOf(4));
+// //Task 2
+// let array = [1, 5, 4, 10, 0, 3];
+// console.log(array.indexOf(4));
+//Task 3
+let array = [1, 3, 5, 10, 20];
+console.log(array.join(' '));
