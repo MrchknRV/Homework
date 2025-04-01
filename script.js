@@ -268,11 +268,19 @@ function SimpleArithmeticGame() {
 // };
 
 // console.log(negativeNumbers([1, 2, 3, 0, -7, -5]));
-//Task 14
+// //Task 14
+// let array = [];
+// for (let i = 0; i < 10; i++) {
+//   array.push(randomInt(0, 10));
+// }
+// let evenArray = array.filter((el) => el % 2 == 0);
+// console.log(array);
+// console.log(evenArray);
+//Task 15
 let array = [];
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 6; i++) {
   array.push(randomInt(0, 10));
 }
-let evenArray = array.filter((el) => el % 2 == 0);
+let res = array.reduce((elem, total) => total + elem);
 console.log(array);
-console.log(evenArray);
+console.log(res);
