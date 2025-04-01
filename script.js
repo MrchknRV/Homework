@@ -254,10 +254,17 @@ function SimpleArithmeticGame() {
 // };
 
 // console.log(squareNumber([1, 2, 3, 4, 5]));
-//Task 12
-const lenghtWords = (array) => {
-  let res = array.map((elem) => elem.length);
+// //Task 12
+// const lenghtWords = (array) => {
+//   let res = array.map((elem) => elem.length);
+//   return res;
+// };
+
+// console.log(lenghtWords(["da", "net", "a", "mumu"]));
+//Task 13
+const negativeNumbers = (array) => {
+  let res = array.filter((num) => num < 0);
   return res;
 };
 
-console.log(lenghtWords(["da", "net", "a", "mumu"]));
+console.log(negativeNumbers([1, 2, 3, 0, -7, -5]));
