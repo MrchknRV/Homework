@@ -203,13 +203,17 @@ function SimpleArithmeticGame() {
 // //Task 3
 // let array = [1, 3, 5, 10, 20];
 // console.log(array.join(' '));
-//Task 4
-const matrix1 = [];
-for (let i = 0; i < 3; i++) {
-  let matrix2 = [];
-  for (let i = 0; i < 3; i++) {
-    matrix2.push(1);
-  }
-  matrix1.push(matrix2);
-}
-console.log(matrix1);
+// //Task 4
+// const matrix1 = [];
+// for (let i = 0; i < 3; i++) {
+//   let matrix2 = [];
+//   for (let i = 0; i < 3; i++) {
+//     matrix2.push(1);
+//   }
+//   matrix1.push(matrix2);
+// }
+// console.log(matrix1);
+//Task 5
+let array = [1, 1, 1];
+array.push(2, 2, 2);
+console.log(array);
