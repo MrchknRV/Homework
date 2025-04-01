@@ -238,12 +238,19 @@ function SimpleArithmeticGame() {
 //   [4, 5, 6],
 // ];
 // console.log(array.flat());
-//Task 10
-let array = [];
-for (let i = 0; i < 10; i++) {
-  array.push(randomInt(1, 10));
-}
-console.log(array);
-for (let i = 0; i < array.length - 1; i++) {
-  console.log(array[i] + array[i + 1]);
-}
+// //Task 10
+// let array = [];
+// for (let i = 0; i < 10; i++) {
+//   array.push(randomInt(1, 10));
+// }
+// console.log(array);
+// for (let i = 0; i < array.length - 1; i++) {
+//   console.log(array[i] + array[i + 1]);
+// }
+//Task 11
+const squareNumber = (array) => {
+  let res = array.map((elem) => elem ** 2);
+  return res;
+};
+
+console.log(squareNumber([1, 2, 3, 4, 5]));
