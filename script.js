@@ -217,7 +217,15 @@ function SimpleArithmeticGame() {
 // let array = [1, 1, 1];
 // array.push(2, 2, 2);
 // console.log(array);
-//Task 6
-let array = [9, 8, 7, "a", 6, 5];
-array.sort().pop();
-console.log(array);
+// //Task 6
+// let array = [9, 8, 7, "a", 6, 5];
+// array.sort().pop();
+// console.log(array);
+//Task 7
+const array = [9, 8, 7, 6, 5];
+let userInput = parseInt(prompt("Угадай число в массиве"));
+if (array.includes(userInput)) {
+  alert("Угадал");
+} else {
+  alert("Не угадал");
+}
