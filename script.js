@@ -213,7 +213,11 @@ function SimpleArithmeticGame() {
 //   matrix1.push(matrix2);
 // }
 // console.log(matrix1);
-//Task 5
-let array = [1, 1, 1];
-array.push(2, 2, 2);
+// //Task 5
+// let array = [1, 1, 1];
+// array.push(2, 2, 2);
+// console.log(array);
+//Task 6
+let array = [9, 8, 7, "a", 6, 5];
+array.sort().pop();
 console.log(array);
