@@ -137,7 +137,7 @@ const generationQuestion = (difficulty) => {
 //Основная программа, с возможностью выбрать уровень сложности игры
 function SimpleArithmeticGame() {
   let difficulty = prompt(
-    "Выбери уровень сложности:\n\tЛегкий\n\tСредний\n\tСложеный"
+    "Выбери уровень сложности:\n\tЛегкий\n\tСредний\n\tСложный"
   ).toLocaleLowerCase();
   if (!["легкий", "средний", "сложный"].includes(difficulty)) {
     alert("Неверный уровень сложности\nПопробуй ещё раз");
@@ -163,7 +163,12 @@ function SimpleArithmeticGame() {
           let validUserAnswer = isNumber(userAnswer);
           if (validUserAnswer) {
             if (userAnswer === q.answer) {
+              alert("Правильно!");
               correctAnswer++;
+            } else if (userAnswer !== q.answer) {
+              alert(
+                `Не правильно!\nПравильный ответ на ${q.question} будет ${q.answer}`
+              );
             }
           } else {
             alert("Ты ввел не число");
@@ -276,11 +281,11 @@ function SimpleArithmeticGame() {
 // let evenArray = array.filter((el) => el % 2 == 0);
 // console.log(array);
 // console.log(evenArray);
-//Task 15
-let array = [];
-for (let i = 0; i < 6; i++) {
-  array.push(randomInt(0, 10));
-}
-let res = array.reduce((elem, total) => total + elem);
-console.log(array);
-console.log(res);
+// //Task 15
+// let array = [];
+// for (let i = 0; i < 6; i++) {
+//   array.push(randomInt(0, 10));
+// }
+// let res = array.reduce((elem, total) => total + elem);
+// console.log(array);
+// console.log(res);
