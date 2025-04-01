@@ -188,3 +188,12 @@ function SimpleArithmeticGame() {
     }
   }
 }
+//Task 1
+let array = [1, 5, 4, 10, 0, 3];
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === 10) {
+    break;
+  } else {
+    console.log(array[i]);
+  }
+}
