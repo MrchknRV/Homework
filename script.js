@@ -229,6 +229,12 @@ function SimpleArithmeticGame() {
 // } else {
 //   alert("Не угадал");
 // }
-//Task 8
-let line = "abcdef".split("");
-console.log(line.reverse().join(""));
+// //Task 8
+// let line = "abcdef".split("");
+// console.log(line.reverse().join(""));
+//Task 9
+let array = [
+  [1, 2, 3],
+  [4, 5, 6],
+];
+console.log(array.flat());
