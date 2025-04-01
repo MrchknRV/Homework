@@ -261,10 +261,18 @@ function SimpleArithmeticGame() {
 // };
 
 // console.log(lenghtWords(["da", "net", "a", "mumu"]));
-//Task 13
-const negativeNumbers = (array) => {
-  let res = array.filter((num) => num < 0);
-  return res;
-};
+// //Task 13
+// const negativeNumbers = (array) => {
+//   let res = array.filter((num) => num < 0);
+//   return res;
+// };
 
-console.log(negativeNumbers([1, 2, 3, 0, -7, -5]));
+// console.log(negativeNumbers([1, 2, 3, 0, -7, -5]));
+//Task 14
+let array = [];
+for (let i = 0; i < 10; i++) {
+  array.push(randomInt(0, 10));
+}
+let evenArray = array.filter((el) => el % 2 == 0);
+console.log(array);
+console.log(evenArray);
