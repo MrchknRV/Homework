@@ -200,6 +200,16 @@ function SimpleArithmeticGame() {
 // //Task 2
 // let array = [1, 5, 4, 10, 0, 3];
 // console.log(array.indexOf(4));
-//Task 3
-let array = [1, 3, 5, 10, 20];
-console.log(array.join(' '));
+// //Task 3
+// let array = [1, 3, 5, 10, 20];
+// console.log(array.join(' '));
+//Task 4
+const matrix1 = [];
+for (let i = 0; i < 3; i++) {
+  let matrix2 = [];
+  for (let i = 0; i < 3; i++) {
+    matrix2.push(1);
+  }
+  matrix1.push(matrix2);
+}
+console.log(matrix1);
