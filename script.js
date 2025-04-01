@@ -222,10 +222,13 @@ function SimpleArithmeticGame() {
 // array.sort().pop();
 // console.log(array);
 //Task 7
-const array = [9, 8, 7, 6, 5];
-let userInput = parseInt(prompt("Угадай число в массиве"));
-if (array.includes(userInput)) {
-  alert("Угадал");
-} else {
-  alert("Не угадал");
-}
+// const array = [9, 8, 7, 6, 5];
+// let userInput = parseInt(prompt("Угадай число в массиве"));
+// if (array.includes(userInput)) {
+//   alert("Угадал");
+// } else {
+//   alert("Не угадал");
+// }
+//Task 8
+let line = "abcdef".split("");
+console.log(line.reverse().join(""));
