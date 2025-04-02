@@ -26,10 +26,12 @@ const startGame = () => {
 
 // Правила игры
 const gameRules = () => {
-  alert("Отлично, давай я ознакомлю тебя с правилами игры");
-  alert("Я загадаю число от 1 до 100, а ты будешь его отгадывать.");
-  alert("Вводить нужно будет только числа от 1 до 100");
-  alert("Если вдргу тебе надоест введи 'Cтоп' и все закончится");
+  alert(
+    `Отлично, давай я ознакомлю тебя с правилами игры
+   Я загадаю число от 1 до 100, а ты будешь его отгадывать. 
+   Вводить нужно будет только числа от 1 до 100 
+   Если вдргу тебе надоест введи 'Cтоп' и все закончится`
+  );
 };
 
 //Основная часть программы
@@ -88,98 +90,205 @@ const guessingGame = () => {
     }
   }
 };
-// // Task 1
-// const maxNumber = (num_1, num_2) => {
-//   if (num_1 === num_2) {
-//     return num_1;
-//   } else if (num_1 > num_2) {
-//     return num_1;
+
+//Second Game "Simple Arithmetic"
+//Начало игры
+const startGameSimpleArithmetic = () => {
+  let ans = confirm(
+    'Приветсвую тебя, хочешь сыграть в игру "Простая арифметика"?'
+  );
+  if (ans) {
+    gameRulesArithmetic();
+    SimpleArithmeticGame();
+  } else {
+    ans = confirm("Это не займёт много времени и сил. Давай попробуем!");
+    if (ans) {
+      gameRulesArithmetic();
+      SimpleArithmeticGame();
+    } else {
+      alert("Тогда приходи, когда будет желание сыграть!");
+    }
+  }
+};
+//Игровые правила
+const gameRulesArithmetic = () => {
+  alert(
+    `Отлично, давай я ознакомлю тебя с правилами игры
+    Я буду задавать тебе примеры по выбранному тобой уровню сложности
+    А ты должен будешь вводить ответ на этот пример
+    Вводить нужно будет только числа!`
+  );
+};
+//Генерация вопроса и правильного ответа
+const generationQuestion = (difficulty) => {
+  let operations = difficulty === "легкий" ? ["+", "-"] : ["+", "-", "*", "/"];
+  let maxNum = difficulty === "сложный" ? 1000 : 100;
+  let number1 = randomInt(1, maxNum);
+  let number2 = randomInt(1, maxNum);
+  let operation = operations[Math.floor(Math.random() * operations.length)];
+  let question;
+  let answer;
+  if (operation === "/") {
+    let div = number1 * number2;
+    question = `${div} ${operation} ${number2}`;
+    answer = div / number2;
+  } else {
+    question = `${number1} ${operation} ${number2}`;
+    answer = eval(question);
+  }
+  return { question, answer: Math.round(answer * 100) / 100 };
+};
+//Основная программа, с возможностью выбрать уровень сложности игры
+function SimpleArithmeticGame() {
+  let difficulty = prompt(
+    "Выбери уровень сложности:\n\tЛегкий\n\tСредний\n\tСложный"
+  ).toLocaleLowerCase();
+  if (!["легкий", "средний", "сложный"].includes(difficulty)) {
+    alert("Неверный уровень сложности\nПопробуй ещё раз");
+    return SimpleArithmeticGame();
+  }
+  const questions = [];
+  let correctAnswer = 0;
+  while (true) {
+    let numberOfTasks = prompt("Выбери количество примеров:");
+    if (numberOfTasks == null || numberOfTasks.toLocaleLowerCase() == "стоп") {
+      alert("Хорошо, приходи, когда будет желание!");
+      break;
+    } else {
+      let validNumberOfTasks = isNumber(numberOfTasks);
+      if (!validNumberOfTasks) {
+        alert("Ты ввел не число!");
+        continue;
+      }
+      for (let i = 0; i < numberOfTasks; i++) {
+        questions.push(generationQuestion(difficulty));
+      }
+      questions.forEach((q, index) => {
+        let userAnswer = parseInt(prompt(`Вопрос ${index + 1}: ${q.question}`));
+        let validUserAnswer = isNumber(userAnswer);
+        if (validUserAnswer) {
+          if (userAnswer === q.answer) {
+            alert("Правильно!");
+            correctAnswer++;
+          } else if (userAnswer !== q.answer) {
+            alert(
+              `Не правильно!\nПравильный ответ на ${q.question} будет ${q.answer}`
+            );
+          }
+        } else {
+          alert("Ты ввел не число");
+        }
+      });
+
+      let score = (correctAnswer / questions.length) * 100;
+      alert(
+        `Вы правильно ответили на ${correctAnswer} из ${
+          questions.length
+        } вопросов.\nВаш результат: ${score.toFixed(2)}%`
+      );
+    }
+    let gameAgain = confirm("Желаете сыграть ещё раз?");
+    if (gameAgain) {
+      return SimpleArithmeticGame();
+    } else {
+      alert("Хорошо, приходите ещё!");
+      break;
+    }
+  }
+}
+// //Task 1
+// let array = [1, 5, 4, 10, 0, 3];
+// for (let i = 0; i < array.length; i++) {
+//   if (array[i] === 10) {
+//     break;
 //   } else {
-//     return num_2;
+//     console.log(array[i]);
 //   }
-// };
-
-// console.log(maxNumber(3, 5));
-
+// }
 // //Task 2
-// const isEven = (num) => {
-//   if (num % 2 == 0) {
-//     return "Число четное";
-//   } else {
-//     return "Число нечетное";
-//   }
-// };
-
-// console.log(isEven(3));
-
-//Task 3
-//1
-// const squareNumber = (num) => console.log(num ** 2);
-// squareNumber(5);
-//2
-// const squareNumber = (num) => num ** 2;
-// let numberSquare = squareNumber(5);
-// console.log(numberSquare);
-
+// let array = [1, 5, 4, 10, 0, 3];
+// console.log(array.indexOf(4));
+// //Task 3
+// let array = [1, 3, 5, 10, 20];
+// console.log(array.join(' '));
 // //Task 4
-// const validAge = () => {
-//   let userAge = prompt("Сколько тебе лет?");
-//   if (userAge < 0) {
-//     alert("Вы ввели неправильное значение");
-//   } else if (userAge > 13) {
-//     alert("Добро пожаловать!");
-//   } else {
-//     alert("Привет, друг!");
+// const matrix1 = [];
+// for (let i = 0; i < 3; i++) {
+//   let matrix2 = [];
+//   for (let i = 0; i < 3; i++) {
+//     matrix2.push(1);
 //   }
-// };
-
-// validAge();
-
-// //Task5
-// const composition = () => {
-//   let num_1 = prompt("Введите первое число");
-//   let num_2 = prompt("Введите второе число");
-//   if (isNaN(num_1) || isNaN(num_2)) {
-//     return "Одно или оба значения не являются числом";
-//   } else {
-//     return num_1 * num_2;
-//   }
-// };
-
-// console.log(composition());
-
+//   matrix1.push(matrix2);
+// }
+// console.log(matrix1);
+// //Task 5
+// let array = [1, 1, 1];
+// array.push(2, 2, 2);
+// console.log(array);
 // //Task 6
-// const cubOfNamber = (num) => {
-//   //   let num = prompt("Введите число:");
-//   if (isNaN(num)) {
-//     return "Переданный параметр не является числом";
-//   } else {
-//     return `${num} в кубе равняется ${num ** 3}`;
-//   }
+// let array = [9, 8, 7, "a", 6, 5];
+// array.sort().pop();
+// console.log(array);
+//Task 7
+// const array = [9, 8, 7, 6, 5];
+// let userInput = parseInt(prompt("Угадай число в массиве"));
+// if (array.includes(userInput)) {
+//   alert("Угадал");
+// } else {
+//   alert("Не угадал");
+// }
+// //Task 8
+// let line = "abcdef".split("");
+// console.log(line.reverse().join(""));
+// //Task 9
+// let array = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+// ];
+// console.log(array.flat());
+// //Task 10
+// let array = [];
+// for (let i = 0; i < 10; i++) {
+//   array.push(randomInt(1, 10));
+// }
+// console.log(array);
+// for (let i = 0; i < array.length - 1; i++) {
+//   console.log(array[i] + array[i + 1]);
+// }
+// //Task 11
+// const squareNumber = (array) => {
+//   let res = array.map((elem) => elem ** 2);
+//   return res;
 // };
 
-// for (let i = 0; i <= 10; i++) {
-//   console.log(cubOfNamber(i));
-// }
-
-// // Task 7
-// function getArea() {
-//   return Math.PI * this.radius ** 2;
-// }
-// function getPerimeter() {
-//   return 2 * Math.PI * this.radius;
-// }
-
-// const circle_1 = {
-//   radius: 8,
-//   getArea: getArea,
-//   getPerimeter: getPerimeter,
-// };
-// const circle_2 = {
-//   radius: 15,
-//   getArea: getArea,
-//   getPerimeter: getPerimeter,
+// console.log(squareNumber([1, 2, 3, 4, 5]));
+// //Task 12
+// const lenghtWords = (array) => {
+//   let res = array.map((elem) => elem.length);
+//   return res;
 // };
 
-// console.log(circle_1.getArea().toFixed(2), circle_1.getPerimeter().toFixed(2));
-// console.log(circle_2.getArea().toFixed(2), circle_2.getPerimeter().toFixed(2));
+// console.log(lenghtWords(["da", "net", "a", "mumu"]));
+// //Task 13
+// const negativeNumbers = (array) => {
+//   let res = array.filter((num) => num < 0);
+//   return res;
+// };
+
+// console.log(negativeNumbers([1, 2, 3, 0, -7, -5]));
+// //Task 14
+// let array = [];
+// for (let i = 0; i < 10; i++) {
+//   array.push(randomInt(0, 10));
+// }
+// let evenArray = array.filter((el) => el % 2 == 0);
+// console.log(array);
+// console.log(evenArray);
+// // Task 15
+// let array = [];
+// for (let i = 0; i < 6; i++) {
+//   array.push(randomInt(0, 10));
+// }
+// let res = array.reduce((elem, total) => total + elem) / array.length;
+// console.log(array);
+// console.log(res.toFixed(2));
