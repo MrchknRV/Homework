@@ -26,10 +26,12 @@ const startGame = () => {
 
 // Правила игры
 const gameRules = () => {
-  alert("Отлично, давай я ознакомлю тебя с правилами игры");
-  alert("Я загадаю число от 1 до 100, а ты будешь его отгадывать.");
-  alert("Вводить нужно будет только числа от 1 до 100");
-  alert("Если вдргу тебе надоест введи 'Cтоп' и все закончится");
+  alert(
+    `Отлично, давай я ознакомлю тебя с правилами игры
+   Я загадаю число от 1 до 100, а ты будешь его отгадывать. 
+   Вводить нужно будет только числа от 1 до 100 
+   Если вдргу тебе надоест введи 'Cтоп' и все закончится`
+  );
 };
 
 //Основная часть программы
@@ -110,10 +112,12 @@ const startGameSimpleArithmetic = () => {
 };
 //Игровые правила
 const gameRulesArithmetic = () => {
-  alert("Отлично, давай я ознакомлю тебя с правилами игры");
-  alert("Я буду задавать тебе примеры по выбранному тобой уровню сложности");
-  alert("А ты должен будешь вводить ответ на этот пример");
-  alert("Вводить нужно будет только числа");
+  alert(
+    `Отлично, давай я ознакомлю тебя с правилами игры
+    Я буду задавать тебе примеры по выбранному тобой уровню сложности
+    А ты должен будешь вводить ответ на этот пример
+    Вводить нужно будет только числа!`
+  );
 };
 //Генерация вопроса и правильного ответа
 const generationQuestion = (difficulty) => {
@@ -152,31 +156,30 @@ function SimpleArithmeticGame() {
       break;
     } else {
       let validNumberOfTasks = isNumber(numberOfTasks);
-      if (validNumberOfTasks) {
-        for (let i = 0; i < numberOfTasks; i++) {
-          questions.push(generationQuestion(difficulty));
-        }
-        questions.forEach((q, index) => {
-          let userAnswer = parseInt(
-            prompt(`Вопрос ${index + 1}: ${q.question}`)
-          );
-          let validUserAnswer = isNumber(userAnswer);
-          if (validUserAnswer) {
-            if (userAnswer === q.answer) {
-              alert("Правильно!");
-              correctAnswer++;
-            } else if (userAnswer !== q.answer) {
-              alert(
-                `Не правильно!\nПравильный ответ на ${q.question} будет ${q.answer}`
-              );
-            }
-          } else {
-            alert("Ты ввел не число");
-          }
-        });
-      } else {
+      if (!validNumberOfTasks) {
         alert("Ты ввел не число!");
+        continue;
       }
+      for (let i = 0; i < numberOfTasks; i++) {
+        questions.push(generationQuestion(difficulty));
+      }
+      questions.forEach((q, index) => {
+        let userAnswer = parseInt(prompt(`Вопрос ${index + 1}: ${q.question}`));
+        let validUserAnswer = isNumber(userAnswer);
+        if (validUserAnswer) {
+          if (userAnswer === q.answer) {
+            alert("Правильно!");
+            correctAnswer++;
+          } else if (userAnswer !== q.answer) {
+            alert(
+              `Не правильно!\nПравильный ответ на ${q.question} будет ${q.answer}`
+            );
+          }
+        } else {
+          alert("Ты ввел не число");
+        }
+      });
+
       let score = (correctAnswer / questions.length) * 100;
       alert(
         `Вы правильно ответили на ${correctAnswer} из ${
@@ -281,11 +284,11 @@ function SimpleArithmeticGame() {
 // let evenArray = array.filter((el) => el % 2 == 0);
 // console.log(array);
 // console.log(evenArray);
-// //Task 15
+// // Task 15
 // let array = [];
 // for (let i = 0; i < 6; i++) {
 //   array.push(randomInt(0, 10));
 // }
-// let res = array.reduce((elem, total) => total + elem);
+// let res = array.reduce((elem, total) => total + elem) / array.length;
 // console.log(array);
-// console.log(res);
+// console.log(res.toFixed(2));
